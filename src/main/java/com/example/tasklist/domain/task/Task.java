@@ -1,7 +1,8 @@
 package com.example.tasklist.domain.task;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -9,7 +10,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "tasks")
-@Data
+@Getter
+@Setter
 public class Task implements Serializable {
 
     @Id

@@ -36,9 +36,9 @@ public class UserDto {
     private String username;
 
     @Schema(
-            description = "User crypted password",
-            example =
-                    "$2a$12$Fy5vARXxbib6t8FB/ZK8bemhidGM1pPjKCZ7dis7GcrI1H3wWyFDi"
+            description = "User crypted password"
+//            , example =
+// "$2a$12$Fy5vARXxbib6t8FB/ZK8bemhidGM1pPjKCZ7dis7GcrI1H3wWyFDi"
     )
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull(message = "Password must be not null.",
@@ -46,9 +46,9 @@ public class UserDto {
     private String password;
 
     @Schema(
-            description = "User password confirmation",
-            example =
-                    "$2a$12$Fy5vARXxbib6t8FB/ZK8bemhidGM1pPjKCZ7dis7GcrI1H3wWyFDi"
+            description = "User password confirmation"
+//            , example =
+// "$2a$12$Fy5vARXxbib6t8FB/ZK8bemhidGM1pPjKCZ7dis7GcrI1H3wWyFDi"
     )
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull(
