@@ -15,10 +15,11 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = """
             SELECT exists(
                             SELECT 1
-                            FROM users_tasks
+                            FROM users_tasks ut
                             WHERE user_id = :userId
                               AND task_id = :taskId)
              """, nativeQuery = true)
-    boolean isTaskOwner(@Param("userId") Long userId, @Param("taskId") Long taskId);
+    boolean isTaskOwner(@Param("userId") Long userId,
+                        @Param("taskId") Long taskId);
 
 }
