@@ -2,7 +2,7 @@ package com.example.tasklist.domain.esception;
 
 public class ResourceMappingException extends RuntimeException {
 
-    public ResourceMappingException(String message) {
+    public ResourceMappingException(final String message) {
         super(message);
     }
 }
