@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class TaskController {
 
-   private final TaskService taskService;
-   private final TaskMapper taskMapper;
+    private final TaskService taskService;
+    private final TaskMapper taskMapper;
 
     @PutMapping
     public TaskDto update(@Validated(OnUpdate.class) @RequestBody TaskDto dto) {

@@ -6,7 +6,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,7 +16,6 @@ public class JwtEntity implements UserDetails {
     private String username;
     private String password;
     private final Collection<? extends GrantedAuthority> authorities;
-
 
 
     @Override

@@ -30,14 +30,14 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public UserDto register(@Validated(OnCreate.class) @RequestBody UserDto dto){
+    public UserDto register(@Validated(OnCreate.class) @RequestBody UserDto dto) {
         User user = userMapper.toEntity(dto);
         User createdUser = userService.create(user);
         return userMapper.toDto(createdUser);
     }
 
     @PostMapping("/refresh")
-    public JwtResponse refresh(@RequestBody String refreshToken){
+    public JwtResponse refresh(@RequestBody String refreshToken) {
         return authService.refresh(refreshToken);
     }
 }
