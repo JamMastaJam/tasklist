@@ -12,3 +12,4 @@ public class JwtRequest {
     @NotNull(message = "Password must be not null.")
     private String password;
 }
+
